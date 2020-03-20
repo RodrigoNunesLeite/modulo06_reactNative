@@ -1,28 +1,13 @@
-
-import React, {Component} from 'react';
-import {Plataform, StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
 import './config/ReactotronConfig';
+/**
+ É sempre bom colocar a importação das rotas, abaixo da
+ importação do reactotron, porque assim, ele vai conseguir
+ capturar os erros e exibir no console
+ */
+import Routes from './routes';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-      </View>
-    );
-  }
+export default function App(){
+  return <Routes />;
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize:20,
-    textAlign: 'center',
-    margin: 10,
-  },
-});
