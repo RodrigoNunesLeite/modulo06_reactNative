@@ -10,7 +10,7 @@ export const Form = styled.View`
   flex-direction: row;
   padding-bottom: 20px;
   border-bottom-width: 1px;
-  border-color:#eee;
+  border-color: #eee;
 `;
 
 export const Input = styled.TextInput.attrs({
@@ -31,10 +31,11 @@ export const SubmitButton = styled(RectButton)`
   border-radius: 4px;
   margin-left: 10px;
   padding: 0 12px;
+  opacity: ${props => (props.loading ? 0.7 : 1)};
 `;
 
 export const List = styled.FlatList.attrs({
-  //tirando a barra de rolagem da lista
+  // tirando a barra de rolagem da lista
   showsVerticalScrollIndicator: false,
 })`
   margin-top: 20px;
@@ -55,7 +56,7 @@ export const Name = styled.Text`
   color: #333;
   font-weight: bold;
   margin-top: 4px;
-  text-align:center;
+  text-align: center;
 `;
 export const Bio = styled.Text.attrs({
   numberOfLines: 2,
